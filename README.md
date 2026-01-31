@@ -1,70 +1,180 @@
-# Getting Started with Create React App
+📁 Project Structure
+src/
+├── components/
+│   ├── Todo/
+│   │   ├── TodoApp.js
+│   │   ├── TodoItem.js
+│   │   ├── FilterControls.js
+│   │   └── todo.css
+│   ├── Forms/
+│   │   ├── UserForm.js
+│   │   └── form.css
+│   ├── Progress/
+│   │   ├── MultiProgressBar.js
+│   │   └── progress.css
+│   ├── Timer/
+│   │   ├── CountdownTimer.js
+│   │   └── timer.css
+│   └── Search/
+│       ├── SearchList.js
+│       └── search.css
+├── hooks/
+│   └── useLocalStorage.js
+├── App.js
+├── index.js
+└── index.css
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✅ Task Breakdown
+🔹 Task 1: Todo Application
 
-## Available Scripts
+Features
 
-In the project directory, you can run:
+Add tasks using input
 
-### `npm start`
+Display tasks using component mapping
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Delete tasks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Mark tasks as completed
 
-### `npm test`
+Filter tasks (All / Active / Completed)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Persist tasks using LocalStorage
 
-### `npm run build`
+Concepts Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+useReducer
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+useEffect
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Controlled inputs
 
-### `npm run eject`
+Conditional rendering
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🔹 Task 2: Form Handling & Password Toggle
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Form fields: Name, Email, ID, Password
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Prevent page reload on submit
 
-## Learn More
+Inline validation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Email format validation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Show / Hide password toggle
 
-### Code Splitting
+Clear form after submission
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Display submitted data
 
-### Analyzing the Bundle Size
+Concepts Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Controlled components
 
-### Making a Progressive Web App
+Form validation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Conditional rendering
 
-### Advanced Configuration
+🔹 Task 3: Dynamic Progress Bar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Features
 
-### Deployment
+Multiple numeric inputs (0–100)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Single progress bar based on average
 
-### `npm run build` fails to minify
+Prevent invalid values
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Animated fill
+
+Color change based on percentage:
+
+Red < 40%
+
+Orange 40–70%
+
+Green > 70%
+
+Concepts Used
+
+Derived state
+
+Inline styles
+
+UI synchronization
+
+🔹 Task 4: Advanced Countdown Timer
+
+Features
+
+Configurable start time (default 10s)
+
+Start / Pause / Resume / Reset controls
+
+Millisecond precision display
+
+Prevent multiple timers
+
+Disable input while running
+
+Concepts Used
+
+setInterval
+
+Cleanup with useEffect
+
+State control
+
+🔹 Task 5: Live Search with Highlighting
+
+Features
+
+Live filtering of list
+
+Case-insensitive search
+
+Highlight matched text
+
+Display result count
+
+Concepts Used
+
+String manipulation
+
+Regex-based highlighting
+
+Dynamic rendering
+
+🎨 Styling & UI
+
+Plain CSS (no Tailwind / Bootstrap)
+
+Light gradient background
+
+Card-based layout
+
+Color-coded buttons
+
+Clear visual hierarchy
+
+Readable fonts and spacing
+
+⚙️ Assumptions & Decisions
+
+The app is frontend-only
+
+LocalStorage is used instead of a backend
+
+CRA is used for stability and evaluation compatibility
+
+Plain CSS is used to demonstrate core styling skills
+
+⚠️ Limitations
+
+No backend or authentication
+
+Data is browser-specific
+
+No accessibility enhancements (can be extended)

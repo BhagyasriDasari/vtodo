@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* RESET */
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* PAGE BACKGROUND */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #eef2ff,
+    #fdf2f8,
+    #ecfeff
+  );
+
+  color: #1f2937;
+}
+
+/* PAGE CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* MAIN HEADING */
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1e3a8a;
+  text-align: center;
+}
+/* BASE CARD */
+.card {
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 30px;
+  padding: 24px;
+
+  background-color: #ffffff;   /* SOLID white */
+  border-radius: 12px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.card.todo {
+  border-left: 8px solid #3b82f6;   /* blue */
+}
+
+.card.form {
+  border-left: 8px solid #f97316;   /* orange */
+}
+
+.card.progress {
+  border-left: 8px solid #06b6d4;   /* cyan */
+}
+
+.card.timer {
+  border-left: 8px solid #22c55e;   /* green */
+}
+
+.card.search {
+  border-left: 8px solid #a855f7;   /* purple */
+}
+button {
+  padding: 8px 16px;
+  margin: 6px 4px;
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+
+  color: #ffffff;
+  background-color: #2563eb; /* default blue */
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+/* Button Variants */
+.btn-primary {
+  background-color: #2563eb; /* blue */
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-danger {
+  background-color: #dc2626; /* red */
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+.btn-secondary {
+  background-color: #e5e7eb; /* gray */
+  color: #111827;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
+}
+
+.btn-success {
+  background-color: #16a34a; /* green */
+}
+
+.btn-success:hover {
+  background-color: #15803d;
+}
+
+.btn-warning {
+  background-color: #f59e0b; /* orange */
+  color: #111827;
+}
+
+.btn-warning:hover {
+  background-color: #d97706;
+}
+
+.btn-purple {
+  background-color: #7c3aed; /* purple */
+}
+
+.btn-purple:hover {
+  background-color: #6d28d9;
 }

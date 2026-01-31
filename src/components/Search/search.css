@@ -1,0 +1,10 @@
+.search-item {
+  padding: 6px 4px;
+  font-size: 15px;
+}
+
+.search-item b {
+  background: yellow;
+  padding: 2px 4px;
+  border-radius: 3px;
+}

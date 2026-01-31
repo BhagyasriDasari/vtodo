@@ -1,0 +1,10 @@
+.timer-display {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 10px 0;
+}
+
+.timer-buttons button {
+  margin-right: 6px;
+}
